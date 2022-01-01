@@ -1,70 +1,19 @@
-# Getting Started with Create React App
+# Curse-word generator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## The process
 
-## Available Scripts
+So this is a bit of a weird one, a friend of mine told me I was getting repetitive when I was trying to lay emphasis on something, so she said "you should use a new word every day, so it stays fresh and whatnot", to which I responded to, "yeah but I'm not that creative nor do I want to think of a new word every day" so she challenged me to create a website to do just that for me. That's exactly what I did, in 2 days, because lockdown. It's somewhat of a bare CSS, but I didn't feel like doing too much front-end, but it looks pretty good in my opinion. I decided on using Python for the server simply because my GitHub profile consists of 43% JavaScript programs, and while I like the language a lot and I know a lot about it, some variation can never hurt. I definitely didn't feel like using C++ because the documentation on just about everything is just non-existent. I decided on using React again anyway for the front-end because I'm really starting to like React and I don't really feel like trying out Angular.
 
-In the project directory, you can run:
+## Building
 
-### `npm start`
+### The server
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Go into the Server folder and install the modules (`flask`, `flask_restful` and `flask_cors`), after that there's no building to it, just run `python3 main.py` and you should be good.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### The client
 
-### `npm test`
+Just go into the Client folder and run `npm run build` after installing all the modules (`npm i`), then install Serve by doing `npm i serve`. After that, you're done.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Running it
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+To run it, just go into the `Client` folder, and use "serve -s build", you do need to start and kickstart the API, by creating the `curse_words.json` file and adding 1 or more words into it manually, after that just use `python3 main.py` in the Server folder and you should be good to go. Do note the Api.js file in the client, make sure the server's address is correct according to your setup.
